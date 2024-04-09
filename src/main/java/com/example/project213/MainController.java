@@ -1,12 +1,12 @@
 package com.example.project213;
 
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.concurrent.atomic.AtomicReference;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -33,6 +33,9 @@ public class MainController {
 
     @FXML
     private TextField engscoreField;
+
+    @FXML
+    private TextField findFormField;
 
     @FXML
     private Button formExplorerStartButton;
@@ -75,6 +78,19 @@ public class MainController {
 
     @FXML
     void initialize() {
+        AtomicReference<String> findFormFiledText = new AtomicReference<>( "");
+        formExplorerStartButton.setOnAction(event -> {
+            try (BufferedReader reader = new BufferedReader(new FileReader(findFormField.getText()))) {
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    findFormFiledText.set(findFormFiledText + "\n" + line);
+                }
+            } catch (IOException e) {
+                System.err.println("An error occurred while reading the file: " + e.getMessage());
+            }
+            reportTextArea.setDisable(false);
+            reportTextArea.setText(String.valueOf(findFormFiledText));
+        });
 
         submitButton.setOnAction(event -> {
             checkEmpty(nameField);

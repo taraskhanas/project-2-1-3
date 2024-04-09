@@ -15,11 +15,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project213.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="910.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project213.MainController">
    <children>
       <AnchorPane layoutX="25.0" layoutY="25.0" prefHeight="800.0" prefWidth="450.0" style="-fx-background-color: #fff; -fx-effect: dropshadow(gaussian, #1a1a1a, 30, 0, 0, 0); -fx-background-radius: 20;">
          <children>
-            <VBox alignment="TOP_CENTER" layoutX="3.0" layoutY="2.0" prefHeight="800.0" prefWidth="450.0">
+            <VBox alignment="TOP_CENTER" layoutX="3.0" layoutY="2.0" prefHeight="860.0" prefWidth="450.0">
                <children>
                   <Text fill="#272727" strokeType="OUTSIDE" strokeWidth="0.0" text="BACHELOR APPLICATION FORM">
                      <font>
@@ -310,11 +310,16 @@
                         <Cursor fx:constant="DEFAULT" />
                      </cursor>
                   </TextArea>
-                  <Button fx:id="formExplorerStartButton" mnemonicParsing="false" style="-fx-background-color: transperent;" text="Form Explorer" underline="true">
+                  <Button fx:id="formExplorerStartButton" mnemonicParsing="false" style="-fx-background-color: transperent;" text="Find Form" underline="true">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
+                  <Pane prefHeight="34.0" prefWidth="449.0">
+                     <children>
+                        <TextField fx:id="findFormField" layoutX="139.0" layoutY="2.0" prefHeight="25.0" prefWidth="173.0" />
+                     </children>
+                  </Pane>
                </children>
             </VBox>
          </children>

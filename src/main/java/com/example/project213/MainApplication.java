@@ -13,7 +13,7 @@ public class MainApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main-view.fxml"));
 
 
-        Scene scene = new Scene(fxmlLoader.load(), 500, 850);
+        Scene scene = new Scene(fxmlLoader.load(), 500, 910);
         stage.setTitle("Bachelor Application Form");
         stage.setScene(scene);
         stage.show();
