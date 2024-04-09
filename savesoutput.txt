@@ -1,0 +1,8 @@
+2 123
+123
+123
+Math        - 123
+Ukrainian - 123
+English     - 123
+Average   - 123
+Degree(s) - [DS, SE]
